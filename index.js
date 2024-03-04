@@ -16,7 +16,6 @@ dbConnection.once('open',()=>{
 })
 app.use(cors())
 app.use(bodyParser.json())
-app.get("/",()=>{ return "URL-Shortner"})
 app.use("/api",route)
 app.get("/:shortID",URLController.getURLData)
 
