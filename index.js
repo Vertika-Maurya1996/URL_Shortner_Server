@@ -22,3 +22,5 @@ app.get("/:shortID",URLController.getURLData)
 app.listen(port , ()=>{
     console.log(`Connected to port ${port}`)
 })
+
+module.exports = app;
