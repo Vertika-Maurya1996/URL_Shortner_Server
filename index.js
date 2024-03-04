@@ -9,7 +9,7 @@ const URLController = require("./controllers/URLController")
 
 let port = 8000;
 
-mongoose.connect(process.env.DB_URI)
+mongoose.connect(process.env.DB_URI || "mongodb+srv://vertika1996maurya:226017@cluster0.a53hmac.mongodb.net/booking_data")
 let dbConnection = mongoose.connection;
 dbConnection.once('open',()=>{
     console.log("Connected to:",dbConnection.db.databaseName)
